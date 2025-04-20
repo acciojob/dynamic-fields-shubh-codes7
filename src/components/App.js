@@ -31,8 +31,8 @@ const App = () => {
         fields.map(({id, name, age}) => {
           return(
             <div key={id}>
-              <input type="text" placeholder="Name" value = {name} onChange={(e) => handleChange(id, "name", e.target.value)}/>
-              <input type="text" placeholder="Age" value = {age} onChange={(e) => handleChange(id, "age", e.target.value)}/>
+              <input type="text" placeholder="Name" name="name" value = {name} onChange={(e) => handleChange(id, "name", e.target.value)}/>
+              <input type="text" placeholder="Age" name="age" value = {age} onChange={(e) => handleChange(id, "age", e.target.value)}/>
               <button type="button" onClick={() => handleRemove(id)}>Remove</button>
             </div>
           )
